@@ -7,15 +7,19 @@ import {
 } from '../controllers/product-controller';
 import { productImageUpload } from '../middlewares';
 
+import { loginAuthenticator } from '../middlewares/authentication';
+import { checkRole } from '../middlewares/authorization';
+
 const productRouter = Router();
 
 productRouter.get('/', getProducts);
-productRouter.post('/', productImageUpload.single('thumbnail'), addProduct);
-
 productRouter.get('/:productId', getProudct);
+
+//productRouter.use(loginAuthenticator.isLoggedIn, checkRole);
+productRouter.post('/', productImageUpload.single('image'), addProduct);
 productRouter.put(
   '/:productId',
-  productImageUpload.single('thumbnail'),
+  productImageUpload.single('image'),
   updateProduct,
 );
 // productRouter.delete('/:productId', deleteProduct);

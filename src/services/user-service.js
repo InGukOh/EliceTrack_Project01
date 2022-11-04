@@ -4,13 +4,12 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
 class UserService {
-  // 본 파일의 맨 아래에서, new UserService(userModel) 하면, 이 함수의 인자로 전달됨
   constructor(userModel) {
     this.userModel = userModel;
   }
   // 로그인
   async login(loginInfo) {
-    // 객체 destructuring
+    console.log('로그인 서비스');
     const { email, password } = loginInfo;
 
     // 우선 해당 이메일의 사용자 정보가  db에 존재하는지 확인
@@ -21,12 +20,14 @@ class UserService {
       );
     }
 
-    // 이제 이메일은 문제 없는 경우이므로, 비밀번호를 확인함
+    console.log(user); //이렇게 받는 것은 안전한가??
 
-    // 비밀번호 일치 여부 확인
-    const correctPasswordHash = user.password; // db에 저장되어 있는 암호화된 비밀번호
+    if (user['deletedAt']) {
+      throw new Error('회원 탈퇴한 계정입니다.');
+    }
 
-    // 매개변수의 순서 중요 (1번째는 프론트가 보내온 비밀번호, 2번쨰는 db에 있떤 암호화된 비밀번호)
+    const correctPasswordHash = user.password;
+
     const isPasswordCorrect = await bcrypt.compare(
       password,
       correctPasswordHash,
@@ -38,10 +39,8 @@ class UserService {
       );
     }
 
-    // 로그인 성공 -> JWT 웹 토큰 생성
     const secretKey = process.env.JWT_SECRET_KEY || 'secret-key';
 
-    // try {
     const token = jwt.sign(
       {
         userId: user._id,
@@ -53,16 +52,14 @@ class UserService {
       },
     );
 
-    //로컬스토리지에 저장된 jwt를 사용
     return {
-      message: '로그인에 성공하셨습니다.',
       status: 200,
+      message: '로그인에 성공하셨습니다.',
       token,
     };
   }
 
-  async getUserInfo(userId) {
-    console.log('서비스단 진입');
+  async getMyInfo(userId) {
     try {
       const userInfo = await this.userModel.findById(userId);
 
@@ -82,12 +79,9 @@ class UserService {
     }
   }
 
-  // 회원가입
   async createUser(userInfo) {
-    // 객체 destructuring
-    const { email, fullName, password } = userInfo;
+    const { email, fullName, password, address, phoneNumber } = userInfo;
 
-    // 이메일 중복 확인
     const user = await this.userModel.findByEmail(email);
     if (user) {
       throw new Error(
@@ -95,67 +89,93 @@ class UserService {
       );
     }
 
-    // 이메일 중복은 이제 아니므로, 회원가입을 진행함
-
-    // 우선 비밀번호 해쉬화(암호화)
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const newUserInfo = { fullName, email, password: hashedPassword };
+    const newUserInfo = {
+      fullName,
+      email,
+      password: hashedPassword,
+      address,
+      phoneNumber,
+    };
 
-    // db에 저장
     const createdNewUser = await this.userModel.create(newUserInfo);
 
     return createdNewUser;
   }
 
-  // 유저정보 수정, 현재 비밀번호가 있어야 수정 가능함.
-  async updateUser(userInfoRequired, toUpdate) {
-    // 객체 destructuring
-    const { userId, currentPassword } = userInfoRequired;
+  async updateUser(userId, toUpdate) {
+    console.log('서비스 실행');
 
-    // 우선 해당 id의 유저가 db에 있는지 확인
-    let user = await this.userModel.findById(userId);
+    const user = await this.userModel.findById(userId);
 
-    // db에서 찾지 못한 경우, 에러 메시지 반환
+    console.log(user);
+
     if (!user) {
       throw new Error('가입 내역이 없습니다. 다시 한 번 확인해 주세요.');
     }
 
-    // 이제, 정보 수정을 위해 사용자가 입력한 비밀번호가 올바른 값인지 확인해야 함
-
-    // 비밀번호 일치 여부 확인
-    const correctPasswordHash = user.password;
-    const isPasswordCorrect = await bcrypt.compare(
-      currentPassword,
-      correctPasswordHash,
-    );
-
-    if (!isPasswordCorrect) {
-      throw new Error(
-        '현재 비밀번호가 일치하지 않습니다. 다시 한 번 확인해 주세요.',
-      );
-    }
-
-    // 이제 드디어 업데이트 시작
-
-    // 비밀번호도 변경하는 경우에는, 회원가입 때처럼 해쉬화 해주어야 함.
-    const { password } = toUpdate;
-
-    if (password) {
-      const newPasswordHash = await bcrypt.hash(password, 10);
-      toUpdate.password = newPasswordHash;
-    }
-
-    // 업데이트 진행
-    user = await this.userModel.update({
+    const result = await this.userModel.update({
       userId,
       update: toUpdate,
     });
 
-    return user;
+    if (!result) {
+      return { status: 400, message: '정보변경에 실패했습니다.' };
+    }
+
+    return { status: 200, message: '정보변경에 성공하였습니다.' };
   }
 
-  async deleteUser() {}
+  async changePassword(userId, password, changedPassword) {
+    const user = await this.userModel.findById(userId);
+
+    if (!user) {
+      throw new Error('유저 정보 조회 에러. 관리자에게 문의하세요.');
+    }
+
+    const currentPassword = user.password;
+
+    const isPasswordCorrect = await bcrypt.compare(password, currentPassword);
+    // console.log(`isPasswordCorrect : ${isPasswordCorrect}`);
+
+    if (!isPasswordCorrect) {
+      return { status: 400, check: '비밀번호가 옳지 않습니다.' };
+    }
+
+    const hashedChangePassword = await bcrypt.hash(changedPassword, 10);
+
+    const result = await this.userModel.changePassword({
+      userId,
+      changedPassword: hashedChangePassword,
+    });
+
+    if (!result) {
+      return { status: 400, check: '비밀번호 변경에 실패했습니다.' };
+    }
+
+    return { status: 200, check: '비밀번호 변경에 성공했습니다.' };
+  }
+
+  async deleteUser(userId, password) {
+    const user = await this.userModel.findById(userId);
+
+    if (!user) {
+      throw new Error('유저 정보 조회 에러. 관리자에게 문의하세요.');
+    }
+
+    const currentPassword = user.password;
+
+    const isPasswordCorrect = await bcrypt.compare(password, currentPassword);
+    // console.log(`isPasswordCorrect : ${isPasswordCorrect}`);
+
+    if (!isPasswordCorrect) {
+      return { status: 400, check: '비밀번호가 옳지 않습니다.' };
+    }
+
+    const result = await this.userModel.deleteUser(userId);
+    console.log(result);
+  }
 }
 
 const userService = new UserService(userModel);

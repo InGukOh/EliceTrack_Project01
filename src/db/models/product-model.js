@@ -1,7 +1,7 @@
 import { model } from 'mongoose';
 import { ProductSchema } from '../schemas/product-schema';
 
-const Product = model('products', ProductSchema);
+const Product = model('Product', ProductSchema);
 
 export class ProductModel {
   async create(productInfo) {
@@ -26,13 +26,22 @@ export class ProductModel {
     return products;
   }
 
-  async findByCategory(category) {
-    const products = await Product.find({ category });
+  async findByCategory(categoryId, page, ITEMS_PER_PAGE) {
+    const products = await Product.find({ categoryId: categoryId, view: true })
+      .skip((page - 1) * ITEMS_PER_PAGE)
+      .limit(ITEMS_PER_PAGE);
     return products;
   }
 
-  async countAll() {
-    const productCount = await Product.find({ view: 1 }).countDocuments();
+  async countAll(categoryId) {
+    if (!categoryId) {
+      const productCount = await Product.find({ view: 1 }).countDocuments();
+      return productCount;
+    }
+    const productCount = await Product.find({
+      view: true,
+      categoryId,
+    }).countDocuments();
     return productCount;
   }
 

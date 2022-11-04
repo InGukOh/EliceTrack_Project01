@@ -14,14 +14,16 @@ const UserSchema = new Schema(
       type: String,
       required: true,
     },
+
     phoneNumber: {
       type: String,
-      required: false,
+      required: true,
     },
+
     address: {
       type: new Schema(
         {
-          postalCode: String,
+          zipCode: String,
           address1: String,
           address2: String,
         },
@@ -29,8 +31,14 @@ const UserSchema = new Schema(
           _id: false,
         },
       ),
-      required: false,
+      required: true,
     },
+
+    deletedAt: {
+      type: Date,
+      require: false,
+    },
+
     role: {
       type: String,
       required: false,

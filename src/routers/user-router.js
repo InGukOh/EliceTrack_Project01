@@ -6,15 +6,16 @@ import { userValidator } from '../middlewares/validation/index';
 
 const userRouter = Router();
 
-// 회원가입 api (아래는 / 이지만, 실제로는 /api/users 로 요청해야 함.)
+//회원가입
 userRouter.post(
   '/',
   userValidator.createUser,
   loginAuthenticator.isNotLoggedIn,
   userController.createUser,
+  userController.logIn,
 );
 
-// 로그인 api (아래는 /login 이지만, 실제로는 /api/users/login 로 요청해야 함.)
+//로그인
 userRouter.post(
   '/login',
   userValidator.login,
@@ -22,20 +23,27 @@ userRouter.post(
   userController.logIn,
 );
 
-// 위 api를 제외한 아래 api들은 isLoggedIn를 거치게 됨
+//로그인 검증
 userRouter.use(loginAuthenticator.isLoggedIn);
 
-// 로그인한 유저 정보를 가져옴
-userRouter.get('/:userId', userController.getUserInfo);
+//내 계정정보
+userRouter.get('/myinfo', userController.getMyInfo);
 
-// 사용자 정보 수정
-userRouter.put('/:userId', userValidator.updateUser, userController.updateUser);
+//내 비밀번호 변경
+userRouter.put(
+  '/myinfo/password',
+  userValidator.checkPassword,
+  userController.changePassword,
+);
 
-// 사용자 삭제
-userRouter.delete('/:userId', userController.deleteUser);
+//내 계정정보 변경
+userRouter.put('/myinfo', userValidator.updateUser, userController.updateUser);
 
-// 로그아웃
-// 로그아웃 요청시 쿠키 삭제
-//userRouter.get('/logout', userController.logOut); //로그아웃은.....프론트가 한다!!
+//회원 탈퇴
+userRouter.delete(
+  '/myinfo/delete',
+  userValidator.deleteUser,
+  userController.deleteUser,
+);
 
 export { userRouter };

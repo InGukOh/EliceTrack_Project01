@@ -1,7 +1,7 @@
 import { model } from 'mongoose';
 import { CategorySchema } from '../schemas/category-schema';
 
-const Category = model('categories', CategorySchema);
+const Category = model('Category', CategorySchema);
 
 export class CategoryModel {
   async create(categoryInfo) {
@@ -14,26 +14,33 @@ export class CategoryModel {
     return categories;
   }
 
-  async findByCategory(categoryId) {
-    const products = await Category.find({ code: categoryId });
+  async findCategory(categoryId) {
+    const category = await Category.findOne({ id: categoryId });
+    return category;
+  }
+
+  async findByPage(categoryId) {
+    const products = await Category.findOne({ id: categoryId }).populate(
+      'products',
+    );
     return products;
   }
 
   async countAll(categoryId) {
     const category = await Category.findOne({
-      _id: categoryId,
+      id: categoryId,
     });
     const productCount = category.products.length;
     return productCount;
   }
 
-  async update(categoryId, updatedInfo) {
-    const filter = { _id: categoryId };
+  async update(categoryId, { id, name }) {
+    const filter = { id: categoryId };
     const option = { returnOriginal: false };
 
     const updatedCategory = await Category.findOneAndUpdate(
       filter,
-      updatedInfo,
+      { id, name },
       option,
     );
     return updatedCategory;

@@ -1,5 +1,5 @@
 import { productModel } from '../db';
-import { categoryService } from './category-service';
+import { cloudinary } from '../middlewares';
 
 class ProductService {
   constructor(productModel) {
@@ -7,19 +7,18 @@ class ProductService {
   }
 
   async addProduct(productInfo) {
-    const { title, category, price, description, manufacturer } = productInfo;
-    const thumbnail = productInfo.path;
+    const { title, categoryId, price, description, manufacturer } = productInfo;
+    const imageUrl = productInfo.path;
 
     const newProduct = await this.productModel.create({
       title,
-      category,
+      categoryId,
       price,
       description,
-      thumbnail,
+      imageUrl,
       manufacturer,
     });
 
-    await categoryService.addToCategory(category, newProduct._id);
     return newProduct;
   }
 
@@ -47,17 +46,17 @@ class ProductService {
       );
     }
 
-    const title = productInfo.title;
-    const category = productInfo.category || product.category;
-    const price = productInfo.price;
-    const description = productInfo.description;
-    const imageUrl = productInfo.path || product.imageUrl;
+    const { title, price, description, manufacturer } = productInfo;
     const view = productInfo.view || true;
-    const manufacturer = productInfo.manufacturer;
+    const categoryId = productInfo.categoryId || product.categoryId;
+    if (productInfo.path) {
+      cloudinary.uploader.destroy(productInfo.path);
+    }
+    const imageUrl = productInfo.path || product.imageUrl;
 
     const updatedInfo = {
       title,
-      category,
+      categoryId,
       price,
       description,
       imageUrl,
