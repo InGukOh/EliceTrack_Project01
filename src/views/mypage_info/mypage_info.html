@@ -30,7 +30,8 @@
                     <span class="has-text-link">쇼핑-데모</span>
                 </a>
 
-                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
@@ -44,8 +45,8 @@
                         <li>
                             <a href="/cart" aria-current="page">
                                 <span class="icon">
-                    <i class="fas fa-cart-shopping"></i>
-                  </span>
+                                    <i class="fas fa-cart-shopping"></i>
+                                </span>
                                 <span>카트</span>
                             </a>
                         </li>
@@ -58,42 +59,53 @@
     <!--마이페이지 회원정보 폼(Form) -->
     <div class="mypage-nav">
         <button class="button is-primary" id="mypageNavInfoButton">내 정보 확인/수정</button>
-        <button class="button is-primary" id="mypageNavOrderButton" onclick="location.href='/mypage/order'">주문 정보</button>
+        <button class="button is-primary" id="mypageNavOrderButton" onclick="location.href='/mypage/order'">주문
+            정보</button>
     </div>
     <div class="register-user-form-container">
         <form class="box register-user-form-box" id="registerUserForm">
             <p class="title is-5 has-text-primary">내 정보 확인</p>
             <div class="field">
-                <label class="label" for="fullNameInput">이름</label>
-                <div class="control">
-                    <input class="input" id="fullNameInput" type="text" placeholder="유재석" autocomplete="on" disabled/>
-                </div>
+                <label class="label" name="fullName">이름
+                    <input class="input able-when-edit" name="fullName" id="fullNameInput" type="text" placeholder="유재석" autocomplete="on" disabled/>
+                </label>
             </div>
 
             <div class="field">
-                <label class="label" for="emailInput">이메일</label>
-                <div class="control">
-                    <input class="input" id="emailInput" type="email" placeholder="abc@example.com" autocomplete="on" disabled/>
-                </div>
+                <label class="label" name="email">이메일
+                    <input class="input able-when-edit" name="email" id="emailInput" type="email" placeholder="abc@example.com" autocomplete="on" disabled/>
+                </label>
             </div>
 
-            <div class="field hidden-untill-edit">
-                <label class="label" for="passwordInput">비밀번호</label>
-                <div class="control">
-                    <input class="input" id="passwordInput" type="password" placeholder="********" autocomplete="off" />
-                </div>
+            <div class="field">
+                <label class="label" name="phoneNumber">전화번호
+                    <input class="input able-when-edit" name="phoneNumber" id="phoneNumberInput" type="tel" placeholder="010-0000-0000" autocomplete="on" disabled/>
+                </label>
             </div>
 
-            <div class="field hidden-untill-edit mb-5">
-                <label class="label" for="passwordConfirmInput">비밀번호 확인</label>
-                <div class="control">
-                    <input class="input" id="passwordConfirmInput" type="password" placeholder="********" autocomplete="off" />
-                </div>
+            <div class="field">
+                <label class="label" name="address">주소
+                    <input class="input able-when-edit" name="postalCode" id="postalCodeInput" type="tel" placeholder="우편 변호" autocomplete="on" disabled/>
+                    <input class="input able-when-edit" name="address1" id="address1Input" type="text" placeholder="기본 주소" autocomplete="on" disabled/>
+                    <input class="input able-when-edit" name="address2" id="address2Input" type="text" placeholder="상세 주소" autocomplete="on" disabled/>
+                </label>
             </div>
 
-            <button class="button is-primary" id="editButton"> 내 정보 수정하기 </button>
-            <button class="button hidden-untill-edit is-primary" id="submitButton"> 수정 완료 </button>
-            <button class="button is-primary" id="deleteButton"> 회원 탈퇴하기 </button>
+            <div class="field hidden-until-edit">
+                <label class="label" name="password">비밀번호
+                    <input class="input" name="password" id="passwordInput" type="password" placeholder="********" autocomplete="off" />
+                </label>
+            </div>
+
+            <div class="field hidden-until-edit mb-5">
+                <label class="label" name="passwordConfirm">비밀번호 확인
+                    <input class="input" name="passwordConfirm" id="passwordConfirmInput" type="password" placeholder="********" autocomplete="off" />
+                </label>
+            </div>
+
+            <button class="button hidden-when-edit is-primary" id="editButton"> 내 정보 수정하기 </button>
+            <button class="button hidden-until-edit is-primary" id="submitButton"> 수정 완료 </button>
+            <button class="button hidden-when-edit is-primary" id="deleteButton"> 회원 탈퇴하기 </button>
         </form>
     </div>
 </body>

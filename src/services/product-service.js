@@ -1,18 +1,20 @@
-import { productModel } from '../db';
-import { cloudinary } from '../middlewares';
+import { ProductModel } from '../db';
+import { AppError, commonErrors } from '../middlewares';
 
 class ProductService {
-  constructor(productModel) {
-    this.productModel = productModel;
-  }
-
-  async addProduct(productInfo) {
-    const { title, categoryId, price, description, manufacturer } = productInfo;
-    const imageUrl = productInfo.path;
-
-    const newProduct = await this.productModel.create({
+  static async createProduct(productInfo) {
+    const {
       title,
-      categoryId,
+      category,
+      price,
+      description,
+      manufacturer,
+      path: imageUrl,
+    } = productInfo;
+
+    const newProduct = await ProductModel.create({
+      title,
+      category,
       price,
       description,
       imageUrl,
@@ -22,70 +24,124 @@ class ProductService {
     return newProduct;
   }
 
-  async getProducts(page, ITEMS_PER_PAGE) {
-    const products = await this.productModel.findByPage(page, ITEMS_PER_PAGE);
+  static async getTotalPage(itemsPerPage) {
+    const productCount = await ProductModel.countAll();
+    if (!productCount) {
+      throw new AppError(
+        commonErrors.resourceNotFoundError,
+        400,
+        '해당 조건을 만족하는 상품이 없습니다 :(',
+      );
+    }
+    const totalPage = Math.ceil(productCount / itemsPerPage);
+    return { totalPage, productCount };
+  }
+
+  static async getProducts(page, itemsPerPage) {
+    const products = await ProductModel.findByPage(page, itemsPerPage);
+    if (!products) {
+      throw new AppError(
+        commonErrors.databaseError,
+        500,
+        'DB에서 알 수 없는 오류가 발생했어요 :( DB 관리자에게 문의하세요.',
+      );
+    }
     return products;
   }
 
-  async getProduct(productId) {
-    const product = await this.productModel.findById(productId);
+  static async getProudctsByKeyword(keyword) {
+    const products = await ProductModel.findByKeyword(keyword);
+    return products;
+  }
+
+  static async getTotalPageByCategory(categoryName, itemsPerPage) {
+    const productCount = await ProductModel.countAll(categoryName);
+    if (!productCount) {
+      throw new AppError(
+        commonErrors.resourceNotFoundError,
+        400,
+        '해당 조건을 만족하는 상품이 없습니다 :(',
+      );
+    }
+    const totalPage = Math.ceil(productCount / itemsPerPage);
+    return { totalPage, productCount };
+  }
+
+  static async getProductsByCategory(categoryName, page, itemsPerPage) {
+    const products = await ProductModel.findByCategory(
+      categoryName,
+      page,
+      itemsPerPage,
+    );
+    if (!products) {
+      throw new AppError(
+        commonErrors.databaseError,
+        500,
+        'DB에서 알 수 없는 오류가 발생했어요 :( DB 관리자에게 문의하세요.',
+      );
+    }
+    return products;
+  }
+
+  static async getProduct(productId) {
+    const product = await ProductModel.findById(productId);
+    if (!product) {
+      throw new AppError(
+        commonErrors.resourceNotFoundError,
+        400,
+        '존재하지 않는 상품입니다. URL을 확인해주세요.',
+      );
+    }
     return product;
   }
 
-  async getTotalPage(ITEMS_PER_PAGE) {
-    const productCount = await this.productModel.countAll();
-    const totalPage = Math.ceil(productCount / ITEMS_PER_PAGE);
-    return totalPage;
+  static async getProductsByAdmin(categoryName) {
+    const products = await ProductModel.findAll(categoryName);
+    return products;
   }
 
-  async updateProduct(productId, productInfo) {
-    let product = await this.productModel.findById(productId);
+  static async updateProduct(productId, productInfo) {
+    let product = await ProductModel.findById(productId);
     if (!product) {
-      throw new Error(
+      throw new AppError(
+        '해당 상품 없음',
+        400,
         '해당 제품이 존재하지 않습니다. 다시 한 번 확인해 주세요.',
       );
     }
 
     const { title, price, description, manufacturer } = productInfo;
-    const view = productInfo.view || true;
-    const categoryId = productInfo.categoryId || product.categoryId;
-    if (productInfo.path) {
-      cloudinary.uploader.destroy(productInfo.path);
-    }
+    const category = productInfo.category || product.category;
     const imageUrl = productInfo.path || product.imageUrl;
 
     const updatedInfo = {
       title,
-      categoryId,
+      category,
       price,
       description,
       imageUrl,
-      view,
       manufacturer,
     };
 
-    const updatedProduct = await this.productModel.update(
-      productId,
-      updatedInfo,
-    );
+    const updatedProduct = await ProductModel.update(productId, updatedInfo);
     return updatedProduct;
   }
 
-  // async deleteProduct(productId) {
-  //   let product = await this.productModel.findById(productId);
+  static async softDeleteProduct(productId) {
+    let product = await ProductModel.findById(productId);
 
-  //   if (!product) {
-  //     throw new Error(
-  //       '해당 제품이 존재하지 않습니다. 다시 한 번 확인해 주세요.',
-  //     );
-  //   }
+    if (!product) {
+      throw new AppError(
+        commonErrors.resourceNotFoundError,
+        400,
+        '해당 제품이 존재하지 않습니다. 다시 한 번 확인해 주세요.',
+      );
+    }
+    const updateInfo = product.view ? { view: false } : { view: true };
+    const result = await ProductModel.softDelete(productId, updateInfo);
 
-  //   const result = await this.productModel.delete(productId);
-
-  //   return result;
-  // }
+    return result;
+  }
 }
 
-const productService = new ProductService(productModel);
-
-export { productService };
+export { ProductService };

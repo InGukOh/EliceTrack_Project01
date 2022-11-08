@@ -4,56 +4,41 @@ import { CategorySchema } from '../schemas/category-schema';
 const Category = model('Category', CategorySchema);
 
 export class CategoryModel {
-  async create(categoryInfo) {
+  static async create(categoryInfo) {
     const newCategory = await Category.create(categoryInfo);
     return newCategory;
   }
 
-  async findAll() {
+  static async findAll() {
     const categories = await Category.find({});
     return categories;
   }
 
-  async findCategory(categoryId) {
+  static async findById(categoryId) {
     const category = await Category.findOne({ id: categoryId });
     return category;
   }
 
-  async findByPage(categoryId) {
-    const products = await Category.findOne({ id: categoryId }).populate(
-      'products',
-    );
-    return products;
+  static async findByName(name) {
+    const category = await Category.findOne({ name });
+    return category;
   }
 
-  async countAll(categoryId) {
-    const category = await Category.findOne({
-      id: categoryId,
-    });
-    const productCount = category.products.length;
-    return productCount;
-  }
-
-  async update(categoryId, { id, name }) {
+  static async update(categoryId, updateInfo) {
     const filter = { id: categoryId };
     const option = { returnOriginal: false };
 
     const updatedCategory = await Category.findOneAndUpdate(
       filter,
-      { id, name },
+      updateInfo,
       option,
     );
     return updatedCategory;
   }
 
-  async addProduct(categoryName, productId) {
-    const result = await Category.findOneAndUpdate(categoryName, {
-      $push: { products: productId },
-    });
+  static async delete(categoryId) {
+    const filter = { id: categoryId };
+    const result = await Category.findOneAndDelete(filter);
     return result;
   }
 }
-
-const categoryModel = new CategoryModel();
-
-export { categoryModel };

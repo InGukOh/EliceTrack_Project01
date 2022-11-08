@@ -4,6 +4,7 @@ import {
   orderManagement,
   userService,
 } from '../services';
+
 import is from '@sindresorhus/is';
 
 export const adminController = {
@@ -24,6 +25,7 @@ export const adminController = {
     console.log(`req.currentUserRole : ${req.currentUserRole}`);
 
     const serchUserId = req.params.userId;
+    console.log(serchUserId);
     const result = await userService.getMyInfo(serchUserId);
     console.log(result);
     const { status, message, userInfo } = result;
@@ -72,6 +74,7 @@ export const adminController = {
       next(error);
     }
   },
+
   async resetPassword(req, res) {
     console.log(`req.params.userId : ${req.params.userId}`);
     console.log(`req.currentUserId : ${req.currentUserId}`);
@@ -90,15 +93,23 @@ export const adminController = {
     res.status(status).json({ check: check });
   },
 
-  async getOrder(req, res) {
-    console.log('컨트롤러');
-    const state = req.query.state;
-    console.log(`state : ${state}`);
+  updateUserRole: async (req, res) => {
+    console.log(req.currentUserRole);
+    if (req.currentUserRole != 'ADMIN') {
+      res
+        .status(400)
+        .json({ message: '해당 기능의 접근 권한이 존재하지 않습니다.' });
+    }
+    const insertData = req.body.checkedArr;
 
-    const result = await orderManagement.getOrder(state);
+    console.log(insertData);
+    console.log(insertData[0]);
+    console.log(Object.keys(insertData[0]));
+    console.log(Object.values(insertData[0]));
+    console.log(Object.values(insertData[0]).join() === 'basic-user');
 
-    //const { status, message, data } = result;
+    const result = await userManagement.updateUserRole(insertData);
 
-    res.status(200).json('시험중');
+    res.status(result.status).json(true);
   },
 };

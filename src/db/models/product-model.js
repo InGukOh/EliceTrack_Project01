@@ -4,48 +4,63 @@ import { ProductSchema } from '../schemas/product-schema';
 const Product = model('Product', ProductSchema);
 
 export class ProductModel {
-  async create(productInfo) {
+  static async create(productInfo) {
     const newProduct = await Product.create(productInfo);
     return newProduct;
   }
-  // Admin 페이지용
-  async findAll() {
+  static async findAll(categoryName) {
+    if (categoryName) {
+      const products = await Product.find({ category: categoryName });
+      return products;
+    }
     const products = await Product.find({});
     return products;
   }
 
-  async findById(productId) {
+  static async findById(productId) {
     const product = await Product.findOne({ _id: productId });
     return product;
   }
 
-  async findByPage(page, ITEMS_PER_PAGE) {
+  static async findByKeyword(keyword) {
+    const products = await Product.find({
+      title: {
+        $regex: new RegExp(keyword, 'i'),
+      },
+    });
+    return products;
+  }
+
+  static async findByPage(page, ITEMS_PER_PAGE) {
     const products = await Product.find({ view: true })
       .skip((page - 1) * ITEMS_PER_PAGE)
       .limit(ITEMS_PER_PAGE);
     return products;
   }
 
-  async findByCategory(categoryId, page, ITEMS_PER_PAGE) {
-    const products = await Product.find({ categoryId: categoryId, view: true })
-      .skip((page - 1) * ITEMS_PER_PAGE)
-      .limit(ITEMS_PER_PAGE);
+  static async findByCategory(categoryName, page, itemsPerPage) {
+    const products = await Product.find({
+      category: categoryName,
+      view: true,
+    })
+      .skip((page - 1) * itemsPerPage)
+      .limit(itemsPerPage);
     return products;
   }
 
-  async countAll(categoryId) {
-    if (!categoryId) {
-      const productCount = await Product.find({ view: 1 }).countDocuments();
+  static async countAll(categoryName) {
+    if (!categoryName) {
+      const productCount = await Product.find({ view: true }).countDocuments();
       return productCount;
     }
     const productCount = await Product.find({
       view: true,
-      categoryId,
+      category: categoryName,
     }).countDocuments();
     return productCount;
   }
 
-  async update(productId, updatedInfo) {
+  static async update(productId, updatedInfo) {
     const filter = { _id: productId };
     const option = { returnOriginal: false };
 
@@ -57,13 +72,9 @@ export class ProductModel {
     return updatedProduct;
   }
 
-  // async delete(productId) {
-  //   const filter = { _id: productId };
-  //   const result = await Product.findOneAndDelete(filter);
-  //   return result;
-  // }
+  static async softDelete(productId, updateInfo) {
+    const filter = { _id: productId };
+    const result = await Product.findOneAndUpdate(filter, updateInfo);
+    return result;
+  }
 }
-
-const productModel = new ProductModel();
-
-export { productModel };

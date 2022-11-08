@@ -6,7 +6,7 @@ const ProductSchema = new Schema(
       type: String,
       required: true,
     },
-    categoryId: {
+    category: {
       type: String,
       required: true,
     },
@@ -28,7 +28,6 @@ const ProductSchema = new Schema(
     },
     view: {
       type: Boolean,
-      required: true,
       default: true,
     },
   },

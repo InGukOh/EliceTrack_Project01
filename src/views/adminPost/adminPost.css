@@ -1,3 +1,27 @@
-li{
-    list-style: none;
+.text-center{
+    margin-top: 120px;
+}
+
+#btnInput{   
+    margin-top: 20px;
+    margin-left: auto;
+}
+
+.flexContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+#cContainer{
+    display: flex;
+    margin-top: 100px;
+    flex-wrap: nowrap;
+}
+
+.form{
+   flex:1
+}
+
+.btnInput{
+    margin: 30px 20px 30px auto;
+    /* margin-left: auto; */
 }
