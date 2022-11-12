@@ -6,11 +6,11 @@ const Bearer = 'Bearer ';
 
 async function get(endpoint, params = '', extra = false) {
   const apiUrl = `${endpoint}/${params}`;
-  console.log(apiUrl);
-  console.log(extra);
+
   if (!extra) {
     await setToken.tokenCheck();
   }
+
   const res = await fetchModule('GET', apiUrl);
 
   const result = await responseHandler(res);
@@ -48,8 +48,12 @@ async function put(endpoint, params = '', data) {
   return result;
 }
 
-async function del(endpoint, params = '', data = {}) {
+async function del(endpoint, params = '', extra = false) {
   const apiUrl = `${endpoint}/${params}`;
+
+  if (!extra) {
+    await setToken.tokenCheck();
+  }
 
   const res = await fetchModule('DELETE', apiUrl);
 

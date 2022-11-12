@@ -5,14 +5,20 @@ const ITEMS_PER_PAGE = 9;
 
 export const productController = {
   createProduct: async (req, res, next) => {
-    const productInfo = { ...req.body, ...req.file };
+    const productInfo = { ...req.body };
     const newProduct = await ProductService.createProduct(productInfo);
     return res.status(201).json(newProduct);
+  },
+
+  setImageUrl: async (req, res, next) => {
+    const imageUrl = req.file.path;
+    return res.status(200).json(imageUrl);
   },
 
   getProducts: async (req, res, next) => {
     const page = Math.abs(+req.query.page) || 1;
     const categoryName = req.query.q;
+
     if (categoryName) {
       const { totalPage, productCount } =
         await ProductService.getTotalPageByCategory(
@@ -60,6 +66,7 @@ export const productController = {
 
   getProductsByAdmin: async (req, res, next) => {
     const categoryName = req.query.q;
+    console.log(categoryName);
     const products = await ProductService.getProductsByAdmin(categoryName);
     return res.status(200).json({
       products,
@@ -80,7 +87,9 @@ export const productController = {
 
   updateProduct: async (req, res, next) => {
     const { productId } = req.params;
+    console.log(productId);
     const productInfo = { ...req.body, ...req.file };
+    console.log(req.body);
     const updatedProduct = await ProductService.updateProduct(
       productId,
       productInfo,
@@ -88,9 +97,17 @@ export const productController = {
     return res.status(200).json(updatedProduct);
   },
 
+  softDeleteProduct: async (req, res, next) => {
+    const { productId } = req.params;
+    await ProductService.softDeleteProduct(productId);
+    return res.sendStatus(200);
+  },
+
   deleteProduct: async (req, res, next) => {
     const { productId } = req.params;
-    const result = await ProductService.softDeleteProduct(productId);
-    return res.status(200).json(result);
+    const result = await ProductService.deleteProduct(productId);
+    return res
+      .status(200)
+      .json({ message: '상품이 정상적으로 삭제되었습니다 :)' });
   },
 };

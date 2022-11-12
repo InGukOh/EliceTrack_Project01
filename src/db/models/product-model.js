@@ -1,3 +1,4 @@
+import { ObjectID } from 'bson';
 import { model } from 'mongoose';
 import { ProductSchema } from '../schemas/product-schema';
 
@@ -19,6 +20,11 @@ export class ProductModel {
 
   static async findById(productId) {
     const product = await Product.findOne({ _id: productId });
+    return product;
+  }
+
+  static async findByTitle(title) {
+    const product = await Product.findOne({ title });
     return product;
   }
 
@@ -57,24 +63,54 @@ export class ProductModel {
       view: true,
       category: categoryName,
     }).countDocuments();
+    console.log(productCount);
     return productCount;
+  }
+
+  static async countOrders(productId) {
+    const product = await Product.aggregate([
+      {
+        $match: {
+          _id: new ObjectID(productId),
+        },
+      },
+      {
+        $set: {
+          idString: {
+            $toString: '$_id',
+          },
+        },
+      },
+      {
+        $lookup: {
+          from: 'orders',
+          localField: 'idString',
+          foreignField: 'orderItems.productId',
+          as: 'orders',
+        },
+      },
+    ]);
+    return product[0].orders.length;
   }
 
   static async update(productId, updatedInfo) {
     const filter = { _id: productId };
     const option = { returnOriginal: false };
 
-    const updatedProduct = await Product.findOneAndUpdate(
-      filter,
-      updatedInfo,
-      option,
-    );
-    return updatedProduct;
+    const result = await Product.updateOne(filter, updatedInfo, option);
+    return result;
   }
 
   static async softDelete(productId, updateInfo) {
     const filter = { _id: productId };
-    const result = await Product.findOneAndUpdate(filter, updateInfo);
+    const result = await Product.updateOne(filter, updateInfo);
+    return result;
+  }
+
+  static async delete(productId) {
+    const filter = { _id: productId };
+    const result = await Product.deleteOne(filter);
+    console.log(result);
     return result;
   }
 }

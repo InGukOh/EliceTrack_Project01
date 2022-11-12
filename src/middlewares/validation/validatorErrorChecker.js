@@ -13,6 +13,7 @@ export const validatorErrorChecker = (req, res, next) => {
     });
     throw new AppError(commonErrors.inputError, 400, sumErr.join('/'));
     //return res.status(419).json({ errors: errors.array() });
+  } else {
+    next();
   }
-  next();
 };

@@ -1,22 +1,24 @@
 import { Router } from 'express';
 
-// export * from './user-router';
-// export * from './product-router';
-// export * from './category-router';
-//export * from './admin-router';
+import {
+  adminRouter,
+  adminOrderRouter,
+  adminProductRouter,
+  adminCategoryRouter,
+} from './admins';
 
-import { adminRouter } from './admins';
-import { userRouter } from './users/user-router';
+import { userRouter } from './users';
 import {
   cartRouter,
   categoryRouter,
   productRouter,
   orderRouter,
+  noticeRouter,
 } from './commons';
 
-import { authenticator } from '../middlewares/authentication';
-
 import { viewsRouter } from './views-router';
+
+import { authenticator } from '../middlewares';
 
 const router = Router();
 
@@ -24,10 +26,16 @@ router.use('/access', authenticator.accessVerify);
 router.use('/refresh', authenticator.refreshVerify);
 
 router.use('/admin', adminRouter);
+router.use('/admin/products', adminProductRouter);
+router.use('/admin/categories', adminCategoryRouter);
+router.use('/admin/orders', adminOrderRouter);
+router.use('/admin/users', adminOrderRouter);
+
 router.use('/users', userRouter);
 router.use('/products', productRouter);
-router.use('/cart', cartRouter);
 router.use('/categories', categoryRouter);
 router.use('/orders', orderRouter);
+
+router.use('/notice', noticeRouter);
 
 export { router, viewsRouter };

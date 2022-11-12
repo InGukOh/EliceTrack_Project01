@@ -1,17 +1,19 @@
 * {
   font-family: 'Poor Story', cursive, sans-serif;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 700 !important;
 }
-
+#nav {
+  height: 100px;
+}
 #logo {
   font-size: 32px;
   font-weight: 700;
 }
 
-html {
-  height: 1vh;
-}
+/* html,body {
+  height: 100%;
+} */
 
 #search {
   width: 250px;
@@ -26,6 +28,7 @@ html {
 }
 
 #toPrevious {
+  padding: 0;
   margin-left: 200px;
   padding-bottom: 50px;
 }
@@ -35,6 +38,7 @@ html {
 }
 
 #toNext {
+  padding: 0;
   margin-right: 200px;
   padding-bottom: 50px;
 }
@@ -49,4 +53,30 @@ html {
 
 #logout:hover {
   cursor: pointer;
+}
+
+.pageWraper {
+  min-height: 100vh;
+position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 0;
+  background-color: #d1d4d7;
+}
+
+.footerItem{
+height: 100px;
+padding: 0;
+}
+
+.footerSection{
+  flex: 1;
 }

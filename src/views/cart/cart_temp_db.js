@@ -2,9 +2,10 @@ let cartTempDBArr = [];
 let cartTotalPrice = 0
 let cartTotalCount = 0
 
-function insertItem(productId, quantity, price, isChecked) {
+function insertItem(productId, title, quantity, price, isChecked) {
     let item = {
         productId,
+        title,
         quantity,
         price,
         isChecked
@@ -12,17 +13,15 @@ function insertItem(productId, quantity, price, isChecked) {
 
     if (isChecked) {
         cartTotalPrice += quantity * price
-        console.log(cartTotalPrice)
         cartTotalCount += quantity
-        console.log(cartTotalCount)
     }
 
     cartTempDBArr.push(item)
 }
 
 function deleteItem(productId) {
-    deleteItem = cartTempDBArr.find(item => item.productId === productId);
-    let { isChecked, quantity, price } = deleteItem
+    let itemDelete = cartTempDBArr.find(item => item.productId === productId);
+    let { isChecked, quantity, price } = itemDelete
 
     if (isChecked) {
         cartTotalPrice -= quantity * price
@@ -33,9 +32,9 @@ function deleteItem(productId) {
 }
 
 function deleteItemChecked() {
-    deleteItem = cartTempDBArr.filter((item) => item.isChecked);
+    let itemDeleteArr = cartTempDBArr.filter((item) => item.isChecked);
 
-    for (let item of deleteItem) {
+    for (let item of itemDeleteArr) {
         cartTotalPrice -= item.quantity * item.price
         cartTotalCount -= item.quantity
     }

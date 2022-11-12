@@ -2,18 +2,22 @@ import { CategoryModel } from '../db';
 import { AppError, commonErrors } from '../middlewares';
 
 class CategoryService {
-  static async addCategory({ name, id }) {
-    if (await CategoryModel.findByName(name)) {
+  static async createCategory(categoryInfo) {
+    if (await CategoryModel.find(categoryInfo)) {
       throw new AppError(
         commonErrors.resourceDuplicationError,
         400,
-        '이미 존재하는 카테고리입니다.',
+        '카테고리 ID와 이름은 유일한 값입니다. 기존 카테고리 및 품목코드를 다시 한 번 확인해주세요!',
       );
     }
-    const newCategory = await CategoryModel.create({
-      name,
-      id,
-    });
+    const newCategory = await CategoryModel.create(categoryInfo);
+    if (!newCategory) {
+      throw new AppError(
+        commonErrors.databaseError,
+        500,
+        'DB에서 알 수 없는 오류가 발생했어요. DB 관리자에게 문의하세요!',
+      );
+    }
     return newCategory;
   }
 
@@ -38,12 +42,19 @@ class CategoryService {
 
   static async deleteCategory(categoryId) {
     const category = await CategoryModel.findById(categoryId);
-
     if (!category) {
       throw new AppError(
         commonErrors.resourceNotFoundError,
         400,
         '해당 카테고리가 존재하지 않습니다. 다시 한 번 확인해 주세요.',
+      );
+    }
+    const productCount = await CategoryModel.countProducts(categoryId);
+    if (productCount) {
+      throw new AppError(
+        commonErrors.businessError,
+        400,
+        '카테고리에 속한 상품이 있어서 삭제할 수 없어요 :(',
       );
     }
 

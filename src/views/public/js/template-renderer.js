@@ -1,3 +1,13 @@
+let isAdmin = false;
+let isLoggedIn = false;
+if (sessionStorage.getItem('accessToken')) {
+  isLoggedIn = true;
+  const decode = atob(sessionStorage.getItem('accessToken')?.split('.')[1]);
+  const payload = JSON.parse(decode);
+  const role = payload.role;
+  isAdmin = role !== 'basic-user';
+}
+
 const hostTitle = document.querySelector('title');
 const favicon = document.createElement('link');
 const nav = document.getElementById('nav');
@@ -45,10 +55,6 @@ function renderNav() {
 }
 
 function getNaveHTML() {
-  const role = sessionStorage.getItem('role');
-  const isLoggedIn = sessionStorage.getItem('accessToken');
-
-  const isAdmin = role === 'ADMIN' || role === 'admin_G';
   return `<div class="d-flex">
   <a class="navbar-brand me-5" href="/" id="logo">개발세발네발🐶</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,8 +85,11 @@ function getNaveHTML() {
             ${
               isLoggedIn
                 ? `<li class="nav-item">
-            <a class="nav-link active" aria-current="page" id="logout"
+            <a class="nav-link active" aria-current="page" id="logout" class=""
             >로그아웃</a
+            ><li class="nav-item">
+            <a class="nav-link active" aria-current="page" id="logout" class="" href="/mypage"
+            >마이페이지</a
             >`
                 : `<li class="nav-item">
             <a class="nav-link active ms-2" aria-current="page" href="/login"
@@ -95,7 +104,7 @@ function getNaveHTML() {
             }
             <li class="nav-item">
             <a
-            class="nav-link active position-relative ms-2"
+            class="nav-link active position-relative"
             aria-current="page"
             href="/cart"
             id="cartNotification"
@@ -143,12 +152,14 @@ function renderFooter() {
 }
 
 function getFooterHTML() {
-  return `<div class="row"><div class="w-100 d-flex justify-content-center align-items-center">
-          <a class="mx-5 btn btn-dark opacity-75">프로젝트 소개</a>
-                <a class="mx-5 btn btn-dark opacity-75">공지사항</a>
+  return `<div class="d-flex justify-content-center align-items-center footerItem">
+          <a class="mx-5 btn btn-dark opacity-75" href='https://kdt-gitlab.elice.io/sw_track/class_03/web_project/team15/project'>프로젝트 소개</a>
+                <a href = '/notice' class="mx-5 btn btn-dark opacity-75">공지사항</a>
                 <a class="mx-5 btn btn-dark opacity-75">입점 문의</a>
                 <a class="mx-5 btn btn-dark opacity-75">관리자 문의</a>
-              </div></div>`;
+                <a  href = '/orderLookup'
+                 class="mx-5 btn btn-dark opacity-75">비회원 주문조회</a>
+              </div>`;
 }
 
 async function handleSearchSubmit(event) {
@@ -165,6 +176,6 @@ async function addLogoutEvent() {
   }
   logout.addEventListener('click', () => {
     sessionStorage.clear();
-    location.reload();
+    location.href = '/';
   });
 }
