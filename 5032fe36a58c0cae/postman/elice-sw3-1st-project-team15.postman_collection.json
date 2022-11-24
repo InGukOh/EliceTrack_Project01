@@ -1,0 +1,1388 @@
+{
+	"info": {
+		"_postman_id": "86cdeb44-d8f5-4641-bcb4-18978aff7e56",
+		"name": "elice-sw3-1st-project-team15",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23971901"
+	},
+	"item": [
+		{
+			"name": "Commons",
+			"item": [
+				{
+					"name": "userAPI",
+					"item": [
+						{
+							"name": "회원가입",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\":\"시험계정2\",\r\n\t\"email\":\"email5@email5.com\",\r\n\t\"password\":\"qlalfqjsgh\",\r\n    \"phoneNumber\":\"01012345678\",\r\n    \"address\":\r\n        {\r\n            \"postalCode\":\"123123\",\r\n            \"address1\":\"주소1ㅁㄴㅇㅁㄴㅇ\",\r\n            \"address2\":\"주소2ㅁㄴㅇㅁㄴㅇ\"\r\n        }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/users",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "회원가입 - 에러용",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\":\" \",\r\n\t\"email\":\" \",\r\n\t\"password\":\" \",\r\n    \"phoneNumber\":\" \",\r\n    \"address\":\r\n        {\r\n            \"postalCode\":\" \",\r\n            \"address1\":\" \",\r\n            \"address2\":\" \"\r\n        }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/users",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "회원탈퇴",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWNmZDY1OTQzYWI2NWFmYjAxNGIiLCJyb2xlIjoiYmFzaWMtdXNlciIsImlhdCI6MTY2Nzk5MTA0OCwiZXhwIjoxNjY3OTkxNjQ4fQ.XDiL34-B89jdj8IAl-DCK5jgMhoV1qEskWIZY94SGYY",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"qlalfqjsgh\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/users/myinfo/delete",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"myinfo",
+										"delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "로그인",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"email\":\"admin@admin.com\",\r\n\t\"password\":\"rhksflwk\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/users/login",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "내정보",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWNmZDY1OTQzYWI2NWFmYjAxNGIiLCJyb2xlIjoiYmFzaWMtdXNlciIsImlhdCI6MTY2ODE1Mzc2MiwiZXhwIjoxNjY4MTU0MzYyfQ.t8t5wzm3i5THaNhxeAo6_-KOmk0XFZkyXXVl68nVibA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWNmZDY1OTQzYWI2NWFmYjAxNGIiLCJyb2xlIjoiYmFzaWMtdXNlciIsImlhdCI6MTY2Nzg0OTE0MCwiZXhwIjoxNjY3ODQ5MjAwfQ.mWRGnkdShMMaWs7k_LbuGofLbsiVsxxVoHU9WbS8mJU",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{HOST}}/api/users/myinfo",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"myinfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "내정보 수정",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWNmMzY1OTQzYWI2NWFmYjAxNDgiLCJyb2xlIjoiYmFzaWMtdXNlciIsImlhdCI6MTY2NzQ2MjQyOSwiZXhwIjoxNjY3NDYyNDg5fQ.BWb3x1V-3hMWpRaI0hbSlwDr9H6gWZychjYfdWJQme4",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fullName\":\"일반계정1\",\r\n\t\"email\":\"email1@email1.com\",\r\n    \"phoneNumber\":\"01112345678\",\r\n    \"address\":\r\n        {\r\n            \"postalCode\":\"변경123\",\r\n            \"address1\":\"변경주소1\",\r\n            \"address2\":\"변경주소2\"\r\n        }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/users/myinfo",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"myinfo"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "비밀번호 변경",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWQyMTQ3ZTA5YWMzOTYxYjA0NTMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NjgxODAzOTQsImV4cCI6MTY2ODE4MDk5NH0.5a2izhTY5zGRdCwllGLrHOamAdbSJtrcawD-xZTlJsE",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"tbvjrhksflwk\",\r\n    \"passwordConfirm\":\"tbvjrhksflwk\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/users/myinfo/password",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"myinfo",
+										"password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "비밀번호 초기화",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"email2@email2.com\",\r\n    \"phoneNumber\":\"010-1234-5678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/users/reset-password",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"reset-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "비밀번호 확인",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWNmZDY1OTQzYWI2NWFmYjAxNGIiLCJyb2xlIjoiYmFzaWMtdXNlciIsImlhdCI6MTY2ODE2ODgwMywiZXhwIjoxNjY4MTY5NDAzfQ.ETJH8kOb4Tk7jq0FqONF0gxuXJtIqwERSVvURtQDvXs",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"0t4v8iqlx3\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/users/chkPassword",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"chkPassword"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "productAPI",
+					"item": [
+						{
+							"name": "상품 조회(전체)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/products?page=100",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "상품 조회(카테고리)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/products?q=키보드&page=100",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "키보드"
+										},
+										{
+											"key": "page",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "상품 검색(상품명)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/products/search?q=마우스",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "마우스"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "개별 상품 조회",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/products/:productId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"products",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "636762b4cc4d64e36cc46f88"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "상품명으로 검색",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/products/search?keyword=마우스",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"products",
+										"search"
+									],
+									"query": [
+										{
+											"key": "keyword",
+											"value": "마우스"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "orderAPI",
+					"item": [
+						{
+							"name": "내 전체 주문 조회(User)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/orders",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "주문 ID로 조회(비회원 가능))",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/orders/:orderId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										":orderId"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": "636cf2b4952d1f623a565d60"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "주문 생성(비회원 가능)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"63625d2147e09ac3961b0453\",\r\n    \"orderItems\": [\r\n        {\r\n            \"productId\": \"636762aecc4d64e36cc46f82\",\r\n            \"title\": \"좋은 마우스\",\r\n            \"quantity\": 4\r\n        },\r\n        {\r\n            \"productId\": \"636762becc4d64e36cc46f8c\",\r\n            \"title\": \"좋은 키보드\",\r\n            \"quantity\": 5\r\n        }\r\n    ],\r\n    \"address\": {\r\n        \"postalCode\": \"05232\",\r\n        \"address1\": \"서울시 광진구 서울시\",\r\n        \"address2\": \"12231동 820번지\"\r\n    },\r\n    \"receiver\": \"김건우\",\r\n    \"phoneNumber\": \"010-9939-2201\",\r\n    \"totalPrice\": 80000,\r\n    \"requrest\": \"문 앞에 놔주세요 :)\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/orders",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "주문 수정(User)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"636cf2b4952d1f623a565d60\",\r\n    \"orderItems\": [\r\n        {\r\n            \"productId\": \"636762aecc4d64e36cc46f82\",\r\n            \"title\": \"좋은 마우스\",\r\n            \"quantity\": 4,\r\n            \"_id\": \"636cfe7216f2a377f23b7d22\"\r\n        },\r\n        {\r\n            \"productId\": \"636762becc4d64e36cc46f8c\",\r\n            \"title\": \"좋은 키보드\",\r\n            \"quantity\": 5,\r\n            \"_id\": \"636cfe7216f2a377f23b7d23\"\r\n        }\r\n    ],\r\n    \"status\": \"배송 중\",\r\n    \"address\": {\r\n        \"postalCode\": \"05232\",\r\n        \"address1\": \"서울시 광진구 서울시\",\r\n        \"address2\": \"12231동 820번지\"\r\n    },\r\n    \"receiver\": \"김건우\",\r\n    \"phoneNumber\": \"010-9939-2201\",\r\n    \"totalPrice\": 80000,\r\n    \"_id\": \"636cfe7216f2a377f23b7d21\",\r\n    \"createdAt\": \"2022-11-10T13:36:50.923Z\",\r\n    \"updatedAt\": \"2022-11-10T13:36:50.923Z\",\r\n    \"__v\": 0\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/orders/:orderId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										":orderId"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": "636abab6dba9985ca21a530b"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "주문 내역 삭제(User)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/orders/:orderId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										":orderId"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": "636abab6dba9985ca21a530b"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "주문 취소",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/orders/:orderId/cancel",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"orders",
+										":orderId",
+										"cancel"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "categoryAPI",
+					"item": [
+						{
+							"name": "카테고리 전체 조회",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/categories",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "noticeAPI",
+					"item": [
+						{
+							"name": "공지사항 조회",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/notice",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"notice"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "adminAPI",
+			"item": [
+				{
+					"name": "UserAPI",
+					"item": [
+						{
+							"name": "관리자_로그인",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"email\":\"admin@admin.com\",\r\n\t\"password\":\"rhksflwk\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "관리자_모든유저 확인",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWQyMTQ3ZTA5YWMzOTYxYjA0NTMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Njc4OTcyMzMsImV4cCI6MTY2Nzg5NzgzM30.zVemdLDT-edKfCLO7eaLzHpAAeHnTANrjnMKdwY_DLI",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{HOST}}/api/admin/allusers",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"allusers"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "관리자_유저정보확인",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWQyMTQ3ZTA5YWMzOTYxYjA0NTMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Njc5Mjc3NjEsImV4cCI6MTY2NzkyODM2MX0.6MBST79K7ya7bRzljNE-Rg13DG5DgSdKSaE5MA0K7o8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{HOST}}/api/admin/allusers/63625cf365943ab65afb0148",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"allusers",
+										"63625cf365943ab65afb0148"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "관리자_유저 비밀번호 초기화",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWQyMTQ3ZTA5YWMzOTYxYjA0NTMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NjgxNjUwNTgsImV4cCI6MTY2ODE2NTY1OH0.lqEp6k-mJiX9Pk7aAlH-kdvyqbopnm-QROfmYsQLu1I",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/admin/allusers/63625cfd65943ab65afb014b/password",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"allusers",
+										"63625cfd65943ab65afb014b",
+										"password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "관리자_유저 권한 변경",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWQyMTQ3ZTA5YWMzOTYxYjA0NTMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2Njc4OTcyMzMsImV4cCI6MTY2Nzg5NzgzM30.zVemdLDT-edKfCLO7eaLzHpAAeHnTANrjnMKdwY_DLI",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"checkedArr\":[{\"63625d0165943ab65afb014e\":\"ADMIN_G\"}]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/admin/allusers",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"allusers"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "productAPI",
+					"item": [
+						{
+							"name": "상품 등록",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"contentType": "",
+											"type": "file",
+											"src": "/C:/Users/김건우/Downloads/LostArk_Mokoko_FanKit/01. LostArk_Mokoko Emoticon/img/img_003.png"
+										},
+										{
+											"key": "title",
+											"value": "새거입니당",
+											"contentType": "",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "ㅋㅋㅋㅋ",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "90000",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.이것은 좋은 마우스입니다.",
+											"type": "text"
+										},
+										{
+											"key": "manufacturer",
+											"value": "G1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/api/admin/products",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "상품 조회(카테고리)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/admin/products?q=키보드&page=2",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "키보드"
+										},
+										{
+											"key": "page",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "상품 정보 수정",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "변경된 마우스123",
+											"type": "text"
+										},
+										{
+											"key": "price",
+											"value": "58000",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "마우스",
+											"type": "text"
+										},
+										{
+											"key": "manufacturer",
+											"value": "G3",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "이것은 마우스에 대한 설명이다!",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/C:/Users/김건우/Downloads/LostArk_Mokoko_FanKit/01. LostArk_Mokoko Emoticon/img/img_006.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{HOST}}/api/admin/products/:productId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "636762aecc4d64e36cc46f82"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "상품 공개/비공개",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/admin/products/:productId/private",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products",
+										":productId",
+										"private"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "636762c6cc4d64e36cc46f94"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "상품 삭제",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/admin/products/:productId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"products",
+										":productId"
+									],
+									"variable": [
+										{
+											"key": "productId",
+											"value": "6369f70a4d35491abef02bb2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "orderAPI",
+					"item": [
+						{
+							"name": "전체 주문 조회(Admin)",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/admin/orders",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "배송 상태 변경(Admin)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"orderIds\" : [\"636bda9778d6ba714128d9b6\", \"636bdaa178d6ba714128d9ba\", \"636bdaa278d6ba714128d9be\"],\r\n    \"status\": \"하하하\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/admin/orders",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"orders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "주문 내역 삭제(Admin)",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/admin/orders/:orderId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"orders",
+										":orderId"
+									],
+									"variable": [
+										{
+											"key": "orderId",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "categoryAPI",
+					"item": [
+						{
+							"name": "카테고리 등록",
+							"protocolProfileBehavior": {
+								"disabledSystemHeaders": {}
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"하하하\",\r\n    \"id\": \"87808050\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/admin/categories",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"categories"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "카테고리 수정",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"60708080\",\r\n    \"name\": \"test2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/admin/categories/:categoryId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "40202020"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "카테고리 삭제",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{HOST}}/api/admin/categories/:categoryId",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"admin",
+										"categories",
+										":categoryId"
+									],
+									"variable": [
+										{
+											"key": "categoryId",
+											"value": "87808050"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "noticeAPI",
+					"item": [
+						{
+							"name": "공지사항 작성",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWQyMTQ3ZTA5YWMzOTYxYjA0NTMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NjgwNzQxNjYsImV4cCI6MTY2ODA3NDc2Nn0.ZiBH4rhhZl4YMmWZ8whjLGDotPtjXU8ypSSqITKuI3U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"noticeTitle\":\"제목\",\r\n    \"noticeContent\":\"내용\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{HOST}}/api/notice/createNotice",
+									"host": [
+										"{{HOST}}"
+									],
+									"path": [
+										"api",
+										"notice",
+										"createNotice"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzYyNWQyMTQ3ZTA5YWMzOTYxYjA0NTMiLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE2NjgxMDE3MjgsImV4cCI6MTY2ODExNjEyOH0.p0dzkkxhJiuJ42vic4vXWJ1rbYksN-CeBJLZr_0b9jk",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "HOST",
+			"value": "http://localhost:3000",
+			"type": "string"
+		},
+		{
+			"key": "kku-token",
+			"value": "",
+			"type": "string"
+		}
+	]
+}

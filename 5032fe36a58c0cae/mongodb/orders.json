@@ -1,0 +1,2038 @@
+[{
+  "_id": {
+    "$oid": "636e797aef39aa89a8341010"
+  },
+  "userId": "63625d2147e09ac3961b0453",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e797aef39aa89a8341011"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "빨리 보내주세요,,, 현기증 난단 말이에요,,,,",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668184442535"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668187664352"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e8164dff4a8c7359f5fb3"
+  },
+  "userId": "636e7c50ef39aa89a834102b",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e8164dff4a8c7359f5fb4"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "배송 전 연락",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668186468312"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668189426358"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e82218ba0305c53f2753c"
+  },
+  "userId": "636e82098ba0305c53f27527",
+  "orderItems": [
+    {
+      "productId": "636e7bc4c54091183737cc4d",
+      "title": "무선 스피커",
+      "quantity": 4,
+      "_id": {
+        "$oid": "636e82218ba0305c53f2753d"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06035",
+    "address1": "서울 강남구 가로수길 5  (신사동)",
+    "address2": "111동 111호"
+  },
+  "receiver": "탐크루즈",
+  "phoneNumber": "010-1234-2222",
+  "totalPrice": 183000,
+  "request": "부재 시 문 앞",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668186657647"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668186664583"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e833810ea6d6206683c95"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e833810ea6d6206683c96"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "ㅁㄴㅇㅁㄴㅇ"
+  },
+  "receiver": "asdsa",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668186936315"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668191354610"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e852669681485a700066a"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e852669681485a700066b"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "01202",
+    "address1": "기마넝",
+    "address2": "ㅁㄴ이ㅏㅓㅁㄴ이ㅏㅓ"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668187430954"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668191354610"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e86338ba0305c53f27652"
+  },
+  "userId": "636e82098ba0305c53f27527",
+  "orderItems": [
+    {
+      "productId": "636e713dc54091183737cbc4",
+      "title": "평범한 노트북",
+      "quantity": 4,
+      "_id": {
+        "$oid": "636e86338ba0305c53f27653"
+      }
+    },
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e86338ba0305c53f27654"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06035",
+    "address1": "서울 강남구 가로수길 5  (신사동)",
+    "address2": "111동 111호"
+  },
+  "receiver": "탐크루즈",
+  "phoneNumber": "010-1234-2222",
+  "totalPrice": 29000,
+  "request": "부재 시 경비실",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668187699509"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668189075674"
+    }
+  },
+  "__v": 0,
+  "deletedAt": {
+    "$date": {
+      "$numberLong": "1668187789152"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "636e87a4da39816e00e06775"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e87a4da39816e00e06776"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668188068714"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668189079436"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e89a1a55cf73a482ec10e"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e89a1a55cf73a482ec10f"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668188577256"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668189075674"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e89ed66c709fd36d8a70a"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e89ed66c709fd36d8a70b"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 336000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668188653771"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668189075674"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e8c59424c2d0bde86466d"
+  },
+  "userId": "636e7c50ef39aa89a834102b",
+  "orderItems": [
+    {
+      "productId": "636e776ac54091183737cc29",
+      "title": "체리맛 헤드폰",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e8c59424c2d0bde86466e"
+      }
+    },
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e8c59424c2d0bde86466f"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 1185000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668189273299"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668189421066"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e9064008f4b9c2d9466a6"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e752dc54091183737cbdc",
+      "title": "마우스!",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636e9064008f4b9c2d9466a7"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "asdasd",
+  "phoneNumber": "asdasdasdasd",
+  "totalPrice": 4999,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668190308641"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668191354610"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636ea85cd0886a476f9bfd01"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636ea85cd0886a476f9bfd02"
+      }
+    },
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 4,
+      "_id": {
+        "$oid": "636ea85cd0886a476f9bfd03"
+      }
+    },
+    {
+      "productId": "636e752dc54091183737cbdc",
+      "title": "마우스!",
+      "quantity": 8,
+      "_id": {
+        "$oid": "636ea85cd0886a476f9bfd04"
+      }
+    },
+    {
+      "productId": "636e75b4c54091183737cbe8",
+      "title": "꽃 키보드",
+      "quantity": 10,
+      "_id": {
+        "$oid": "636ea85cd0886a476f9bfd05"
+      }
+    }
+  ],
+  "status": "상품 준비 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": ""
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 10439992,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668196444874"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668196444874"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eab71576ba0f378f64f72"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eab71576ba0f378f64f73"
+      }
+    }
+  ],
+  "status": "상품 준비 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 1103000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668197233300"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668197233300"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eae41943e839d7a76f192"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e74fdc54091183737cbd9",
+      "title": "형광 헤드폰",
+      "quantity": 5,
+      "_id": {
+        "$oid": "636eae41943e839d7a76f193"
+      }
+    }
+  ],
+  "status": "상품 준비 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 1653000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668197953200"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668197953200"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eae80943e839d7a76f1b7"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eae80943e839d7a76f1b8"
+      }
+    },
+    {
+      "productId": "636e713dc54091183737cbc4",
+      "title": "평범한 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eae80943e839d7a76f1b9"
+      }
+    },
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eae80943e839d7a76f1ba"
+      }
+    }
+  ],
+  "status": "상품 준비 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "ㅁㄴㅇ",
+  "phoneNumber": "ㅁㄴㅇㅁㄴㅇ",
+  "totalPrice": 1437000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668198016266"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668198016266"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eaea2943e839d7a76f1c5"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eaea2943e839d7a76f1c6"
+      }
+    }
+  ],
+  "status": "상품 준비 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 336000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668198050912"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668198050912"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eeaaee660f550fd1b36d4"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e74fdc54091183737cbd9",
+      "title": "형광 헤드폰",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eeaaee660f550fd1b36d5"
+      }
+    },
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eeaaee660f550fd1b36d6"
+      }
+    }
+  ],
+  "status": "상품 준비 중",
+  "address": {
+    "postalCode": "13494",
+    "address1": "경기 성남시 분당구 판교역로 235  (삼평동)",
+    "address2": "123"
+  },
+  "receiver": "엘리스2",
+  "phoneNumber": "010-0000-0000",
+  "totalPrice": 1433000,
+  "request": "직접 입력사항",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668213422406"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668213422406"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eee25e660f550fd1b3701"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 2,
+      "_id": {
+        "$oid": "636eee25e660f550fd1b3702"
+      }
+    }
+  ],
+  "status": "상품 준비 중",
+  "address": {
+    "postalCode": "13494",
+    "address1": "경기 성남시 분당구 판교역로 235  (삼평동)",
+    "address2": "1234"
+  },
+  "receiver": "엘리스",
+  "phoneNumber": "010-0000-0000",
+  "totalPrice": 669000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668214309432"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668214309432"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eeeace660f550fd1b3714"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eeeace660f550fd1b3715"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "13494",
+    "address1": "경기 성남시 분당구 판교역로 235  (삼평동)",
+    "address2": "1234"
+  },
+  "receiver": "엘리스",
+  "phoneNumber": "010-0000-0000",
+  "totalPrice": 1103000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668214444455"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668238729769"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eefb0e660f550fd1b3743"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e713dc54091183737cbc4",
+      "title": "평범한 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eefb0e660f550fd1b3744"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "",
+    "address1": "",
+    "address2": ""
+  },
+  "receiver": "유잿석",
+  "phoneNumber": "010-1234-1234",
+  "totalPrice": 4000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668214704541"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668222832882"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636efa1ee660f550fd1b38cf"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636efa1ee660f550fd1b38d0"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668217374611"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223787320"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636efa8c5803de1504bfeb0c"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636efa8c5803de1504bfeb0d"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668217484483"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223088386"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636efd10c88256be53c623ae"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636efd10c88256be53c623af"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 336000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668218128882"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223088386"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636efd805dc90b63a1b6af2e"
+  },
+  "userId": "636efa12e660f550fd1b38c3",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636efd805dc90b63a1b6af2f"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 336000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668218240900"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668218341109"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636efd9e5dc90b63a1b6af42"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636efd9e5dc90b63a1b6af43"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668218270295"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223088386"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eff8701c93f97b27b6e44"
+  },
+  "userId": "636efa12e660f550fd1b38c3",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eff8701c93f97b27b6e45"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668218759920"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668222374323"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636eff9601c93f97b27b6e56"
+  },
+  "userId": "636efa12e660f550fd1b38c3",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636eff9601c93f97b27b6e57"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668218774134"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668222375810"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f0d7401c93f97b27b6eb6"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f0d7401c93f97b27b6eb7"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "ㅁㄴ123321",
+    "address1": "ㅁㄴㅇㅇㄴㅁ",
+    "address2": "ㅁㄴㅇㅇㅁㄴㅁㅇㄴ"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668222324734"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223787320"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f0da101c93f97b27b6ecf"
+  },
+  "userId": "636efa12e660f550fd1b38c3",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f0da101c93f97b27b6ed0"
+      }
+    },
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f0da101c93f97b27b6ed1"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 358000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668222369688"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668222376455"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f0edb01c93f97b27b7015"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f0edb01c93f97b27b7016"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "123123",
+    "address1": "asdasdas",
+    "address2": "asdasd"
+  },
+  "receiver": "rasdasd",
+  "phoneNumber": "asdasdasd",
+  "totalPrice": 1103000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668222683173"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223787320"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f0fde01c93f97b27b7119"
+  },
+  "userId": "63625d2147e09ac3961b0453",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 20,
+      "_id": {
+        "$oid": "636f0fde01c93f97b27b711a"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "12312312",
+    "address1": "1233121123123",
+    "address2": "123321132132132"
+  },
+  "receiver": "김건",
+  "phoneNumber": "0101123123",
+  "totalPrice": 443000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668222942799"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668222954537"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f121701c93f97b27b71d2"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f121701c93f97b27b71d3"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": ""
+  },
+  "receiver": "김건우",
+  "phoneNumber": "019-9939-2201",
+  "totalPrice": 336000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668223511201"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668225967394"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f12557fefacd3877f72d8"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f12557fefacd3877f72d9"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668223573936"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668225967394"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f126e01c93f97b27b7201"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f126e01c93f97b27b7202"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 336000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668223598187"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668225967394"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f12d001c93f97b27b722d"
+  },
+  "userId": "636f12c701c93f97b27b7221",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f12d001c93f97b27b722e"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 336000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668223696298"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223701980"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f183301c93f97b27b7400"
+  },
+  "userId": "636f078301c93f97b27b6e88",
+  "orderItems": [
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 2,
+      "_id": {
+        "$oid": "636f183301c93f97b27b7401"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "13536",
+    "address1": "경기 성남시 분당구 판교역로2번길 23  (백현동)",
+    "address2": "1234"
+  },
+  "receiver": "엘리스유저",
+  "phoneNumber": "010-0000-0000",
+  "totalPrice": 2203000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668225075342"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668225967394"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f184701c93f97b27b741c"
+  },
+  "userId": "636f078301c93f97b27b6e88",
+  "orderItems": [
+    {
+      "productId": "636e752dc54091183737cbdc",
+      "title": "마우스!(신상)",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f184701c93f97b27b741d"
+      }
+    },
+    {
+      "productId": "636e765ec54091183737cc05",
+      "title": "헤드폰1",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f184701c93f97b27b741e"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "13536",
+    "address1": "경기 성남시 분당구 판교역로2번길 23  (백현동)",
+    "address2": "1234"
+  },
+  "receiver": "엘리스유저",
+  "phoneNumber": "010-0000-0000",
+  "totalPrice": 61788,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668225095940"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668225127082"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f1b4d01c93f97b27b7462"
+  },
+  "userId": "636f1b3e01c93f97b27b7456",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f1b4d01c93f97b27b7463"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 25000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668225869684"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668225889782"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f4cf801c93f97b27b7655"
+  },
+  "userId": "636f07b101c93f97b27b6e94",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f4cf801c93f97b27b7656"
+      }
+    },
+    {
+      "productId": "636e75b4c54091183737cbe8",
+      "title": "꽃 키보드",
+      "quantity": 6,
+      "_id": {
+        "$oid": "636f4cf801c93f97b27b7657"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "13494",
+    "address1": "경기 성남시 분당구 판교역로 235  (삼평동)",
+    "address2": "456"
+  },
+  "receiver": "엘리스관리자",
+  "phoneNumber": "010-0000-0000",
+  "totalPrice": 6336000,
+  "request": "배송 전 연락",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668238584458"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669046177535"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f4f5801c93f97b27b77db"
+  },
+  "userId": "636f07b101c93f97b27b6e94",
+  "orderItems": [
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f4f5801c93f97b27b77dc"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "13494",
+    "address1": "경기 성남시 분당구 판교역로 235  (삼평동)",
+    "address2": "456"
+  },
+  "receiver": "엘리스관리자",
+  "phoneNumber": "010-0000-0000",
+  "totalPrice": 1103000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668239192290"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668242759577"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f549d01c93f97b27b78ed"
+  },
+  "userId": "636f48e401c93f97b27b759e",
+  "orderItems": [
+    {
+      "productId": "636e74d5c54091183737cbd6",
+      "title": "힙합 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f549d01c93f97b27b78ee"
+      }
+    }
+  ],
+  "status": "주문 취소",
+  "address": {
+    "postalCode": "11900",
+    "address1": "경기 구리시 담터길32번길 111  (갈매동)",
+    "address2": "123123123"
+  },
+  "receiver": "이성일",
+  "phoneNumber": "010-40414601",
+  "totalPrice": 1103000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668240541300"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668240625663"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f5d7a01c93f97b27b7a66"
+  },
+  "userId": "636f48e401c93f97b27b759e",
+  "orderItems": [
+    {
+      "productId": "636e74fdc54091183737cbd9",
+      "title": "형광 헤드폰",
+      "quantity": 1,
+      "_id": {
+        "$oid": "636f5d7a01c93f97b27b7a67"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "11900",
+    "address1": "경기 구리시 담터길32번길 111  (갈매동)",
+    "address2": "123123123"
+  },
+  "receiver": "이성일",
+  "phoneNumber": "010-40414601",
+  "totalPrice": 333000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668242810539"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669046155828"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636fd01301c93f97b27b7b75"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e82c18ba0305c53f27578",
+      "title": "상남자 헤드폰",
+      "quantity": 3,
+      "_id": {
+        "$oid": "636fd01301c93f97b27b7b76"
+      }
+    },
+    {
+      "productId": "636e713dc54091183737cbc4",
+      "title": "평범한 노트북",
+      "quantity": 3,
+      "_id": {
+        "$oid": "636fd01301c93f97b27b7b77"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06517",
+    "address1": "서울 서초구 나루터로 15  (잠원동)",
+    "address2": "232332"
+  },
+  "receiver": "유재석",
+  "phoneNumber": "010232323",
+  "totalPrice": 12000,
+  "request": "배송 전 연락",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668272147628"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669046155828"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636fd04b01c93f97b27b7ba5"
+  },
+  "userId": "636e82098ba0305c53f27527",
+  "orderItems": [
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 4,
+      "_id": {
+        "$oid": "636fd04b01c93f97b27b7ba6"
+      }
+    },
+    {
+      "productId": "636e713dc54091183737cbc4",
+      "title": "평범한 노트북",
+      "quantity": 3,
+      "_id": {
+        "$oid": "636fd04b01c93f97b27b7ba7"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "06035",
+    "address1": "서울 강남구 가로수길 5  (신사동)",
+    "address2": "111동 111호"
+  },
+  "receiver": "탐크루즈",
+  "phoneNumber": "010-1234-2222",
+  "totalPrice": 94000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668272203470"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668388084049"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6370bbdd01c93f97b27b81dd"
+  },
+  "userId": "636e82098ba0305c53f27527",
+  "orderItems": [
+    {
+      "productId": "636e74fdc54091183737cbd9",
+      "title": "형광 헤드폰",
+      "quantity": 4,
+      "_id": {
+        "$oid": "6370bbdd01c93f97b27b81de"
+      }
+    },
+    {
+      "productId": "636e7622c54091183737cbff",
+      "title": "빅 헤드폰(신상)",
+      "quantity": 3,
+      "_id": {
+        "$oid": "6370bbdd01c93f97b27b81df"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "13480",
+    "address1": "경기 성남시 분당구 대왕판교로 477  (판교동)",
+    "address2": ""
+  },
+  "receiver": "탐크루즈",
+  "phoneNumber": "010-1234-2222",
+  "totalPrice": 2013000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668332509778"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668508682208"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6371840501c93f97b27b82ea"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e713dc54091183737cbc4",
+      "title": "평범한 노트북",
+      "quantity": 1,
+      "_id": {
+        "$oid": "6371840501c93f97b27b82eb"
+      }
+    },
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드1111",
+      "quantity": 1,
+      "_id": {
+        "$oid": "6371840501c93f97b27b82ec"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "",
+    "address1": "",
+    "address2": ""
+  },
+  "receiver": "aaaaaaa",
+  "phoneNumber": "aaaaaaaaaa",
+  "totalPrice": 337000,
+  "request": "요청 사항 없음",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668383749848"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668508682208"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637368c301c93f97b27b8491"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드1111",
+      "quantity": 5,
+      "_id": {
+        "$oid": "637368c301c93f97b27b8492"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 1668000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668507843733"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668508682208"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637368fe01c93f97b27b84af"
+  },
+  "userId": "637368e701c93f97b27b849d",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드1111",
+      "quantity": 3,
+      "_id": {
+        "$oid": "637368fe01c93f97b27b84b0"
+      }
+    },
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 5,
+      "_id": {
+        "$oid": "637368fe01c93f97b27b84b1"
+      }
+    },
+    {
+      "productId": "636e713dc54091183737cbc4",
+      "title": "평범한 노트북",
+      "quantity": 3,
+      "_id": {
+        "$oid": "637368fe01c93f97b27b84b2"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 1115000,
+  "request": "직접 수령할게요.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668507902842"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669046191212"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63736b5f01c93f97b27b85c5"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드1111",
+      "quantity": 8,
+      "_id": {
+        "$oid": "63736b5f01c93f97b27b85c6"
+      }
+    }
+  ],
+  "status": "배송 완료",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "비회원",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 2667000,
+  "request": "부재 시 경비실",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668508511018"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669046191212"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63736b9401c93f97b27b85e3"
+  },
+  "userId": "63736b7d01c93f97b27b85d1",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "전투용 키보드1111",
+      "quantity": 3,
+      "_id": {
+        "$oid": "63736b9401c93f97b27b85e4"
+      }
+    },
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 4,
+      "_id": {
+        "$oid": "63736b9401c93f97b27b85e5"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 1090000,
+  "request": "배송 전 연락",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668508564339"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669046147757"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63736cbc01c93f97b27b8714"
+  },
+  "userId": "비회원",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "수정된 전투용 키보드",
+      "quantity": 3,
+      "_id": {
+        "$oid": "63736cbc01c93f97b27b8715"
+      }
+    },
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 3,
+      "_id": {
+        "$oid": "63736cbc01c93f97b27b8716"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "비회원",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 1068000,
+  "request": "직접 수령",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668508860154"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668509003755"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63736cec01c93f97b27b8734"
+  },
+  "userId": "63736cda01c93f97b27b8722",
+  "orderItems": [
+    {
+      "productId": "636e70f6c54091183737cbbe",
+      "title": "수정된 전투용 키보드",
+      "quantity": 3,
+      "_id": {
+        "$oid": "63736cec01c93f97b27b8735"
+      }
+    },
+    {
+      "productId": "636e711cc54091183737cbc1",
+      "title": "개발자 손목을 위한 마우스",
+      "quantity": 3,
+      "_id": {
+        "$oid": "63736cec01c93f97b27b8736"
+      }
+    }
+  ],
+  "status": "배송 중",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "receiver": "김건우",
+  "phoneNumber": "010-9939-2201",
+  "totalPrice": 1068000,
+  "request": "부재 시 택배함",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668508908667"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1669046147757"
+    }
+  },
+  "__v": 0
+}]

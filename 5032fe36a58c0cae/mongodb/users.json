@@ -1,0 +1,667 @@
+[{
+  "_id": {
+    "$oid": "63625cf365943ab65afb0148"
+  },
+  "fullName": "일반계정1",
+  "email": "email1@email1.com",
+  "password": "$2b$10$CJ3keE4sgmIH1LlBm031B.ROGPiUMBbinD00GWwmlAa78j563L0ma",
+  "phoneNumber": "01012345678",
+  "address": {
+    "address1": "변경주소1",
+    "address2": "변경주소2"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667390707751"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223775855"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63625cfd65943ab65afb014b"
+  },
+  "fullName": "일반계정2",
+  "email": "email2@email2.com",
+  "password": "$2b$10$m3WBm.HmhRTLV8ewxKoj.ekSQWwCadr21Jmx0fJi/zzziX9H08qRm",
+  "phoneNumber": "010-1234-5678",
+  "address": {
+    "postalCode": "63309",
+    "address1": "제주특별자치도 제주시 첨단로 242  (영평동)",
+    "address2": "주소2ddd"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667390717152"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223775873"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63625d0165943ab65afb014e"
+  },
+  "fullName": "일반계정3",
+  "email": "email3@email3.com",
+  "password": "$2b$10$gjc2TihFTSMO8aLIdn.30eRR4xiXkhj/UGMq5tT6pSt/zLdkuTpFa",
+  "phoneNumber": "01012345678",
+  "address": {
+    "postalCode": "123",
+    "address1": "주소1",
+    "address2": "주소2"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667390721669"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223775891"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63625d1365943ab65afb0152"
+  },
+  "fullName": "관리자계정1",
+  "email": "a_email1@email1.com",
+  "password": "$2b$10$wevzjqVJMl6fy9axAy3ecupDbZLP/eAbHFpZ0oCAVq8isP3.wldei",
+  "phoneNumber": "01012345678",
+  "address": {
+    "postalCode": "123",
+    "address1": "주소1",
+    "address2": "주소2"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667390739742"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1667901268256"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63625d1e65943ab65afb0155"
+  },
+  "fullName": "관리자계정2",
+  "email": "a_email2@email2.com",
+  "password": "$2b$10$A9GbxLgAjteoEsmvwnMtBuo4Bnrzx6rropasiRM1R/UvDtu45cI4O",
+  "phoneNumber": "01012345678",
+  "address": {
+    "postalCode": "123",
+    "address1": "주소1",
+    "address2": "주소2"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1667390750229"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668222484546"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63625d2147e09ac3961b0453"
+  },
+  "role": "ADMIN",
+  "email": "admin@admin.com",
+  "password": "$2b$10$QmLpuGS.unN7zfjV7aDwh.4J6ABFDXek54nnttaSXHygdjlhzX7Ea",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668180638639"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "636e42ade3a88f174170a967"
+  },
+  "fullName": "유재석",
+  "email": "turtle@turtle.com",
+  "password": "$2b$10$azfD9LbEXcNgMKWimBJrTuUe4wj3YpLfiORLGzbOAdnw//aD0yYVK",
+  "phoneNumber": "010-2332-2233",
+  "address": {
+    "postalCode": "04352",
+    "address1": "서울 용산구 두텁바위로 2  (남영동)",
+    "address2": "102동 223호"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668170413237"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668507948378"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e45d70e39956035600ed3"
+  },
+  "fullName": "김건우",
+  "email": "farenheim77@naver.co",
+  "password": "$2b$10$pKume36pJ0HfqEktPA9rL.Suf7VVaYel3AglLip9qW1pJ9Vkqjx7O",
+  "phoneNumber": "010-2222-2222",
+  "address": {
+    "postalCode": "06252",
+    "address1": "서울 강남구 강남대로 328  (역삼동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668171223744"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668217908655"
+    }
+  },
+  "__v": 0,
+  "deletedAt": {
+    "$date": {
+      "$numberLong": "1668171850306"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "636e5dd94325952ff7b4aaaf"
+  },
+  "fullName": "김건우",
+  "email": "aslkdj@naver.com",
+  "password": "$2b$10$RCxeLX.3t7RxgLQqDgqu.OcLPda.pzzZTjM595uV7e9IHBqPwg5p2",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668177369348"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668217908673"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e62a9a528e7837e21c362"
+  },
+  "fullName": "asdasdasdds",
+  "email": "asljdkasdk@naver.com",
+  "password": "$2b$10$wtiGPIb2G6n/pFtqrDhqgeay80g3Gnn4K9dlMJNZWhezp7./BjHnC",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668178601741"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668178601741"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e6be99985d6f9634b4fcd"
+  },
+  "fullName": "김건우",
+  "email": "anythingthannothing@gmail.com",
+  "password": "$2b$10$2TlXdOMtzAOTJH/qL/CiN.vJngzMz5JhiS9TEGBarmW.q9kcUtXTe",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "05089",
+    "address1": "서울 광진구 강변북로 2140  (자양동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668180969604"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668507948471"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e6e621efcec9b40b35c93"
+  },
+  "fullName": "김건우",
+  "email": "farenheim77@naver.com",
+  "password": "$2b$10$UVtR.30bRX.II7z5OMv6A.DZV1v7UoT6lpHy4LZ.lylZmcBL2GjXS",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668181602104"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668196522614"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e82098ba0305c53f27527"
+  },
+  "fullName": "탐크루즈",
+  "email": "tom@tom.com",
+  "password": "$2b$10$8j7na30D8q8I0YOmsu2KhOzJUAimIkAHzEUDegnsWPH/luMwf7Xva",
+  "phoneNumber": "010-1234-2222",
+  "address": {
+    "postalCode": "06035",
+    "address1": "서울 강남구 가로수길 5  (신사동)",
+    "address2": "111동 111호"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668186633411"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668332619028"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e9bf7d0886a476f9bfcba"
+  },
+  "fullName": "asd",
+  "email": "asd@asd.com",
+  "password": "$2b$10$oHRmfgsmrwKL2AAYi/CNpO5hMSDcFgSg0WGRimt4UmoMZV4xQDBr6",
+  "phoneNumber": "010-0000-0000",
+  "address": {
+    "postalCode": "03054",
+    "address1": "서울 종로구 팔판길 1-6  (팔판동)",
+    "address2": "1"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668193271344"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668507936346"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636e9c370c30ecc39613ca65"
+  },
+  "fullName": "김건우",
+  "email": "farenheim8@naver.com",
+  "password": "$2b$10$ZSIa7GWHKuCGdeCi3wmY8ewjRwezC8gYhMa/JmGGl3tOOmXL87MLO",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668193335994"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668507936367"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636ee3cbe660f550fd1b369a"
+  },
+  "fullName": "엘리스",
+  "email": "elice@email.com",
+  "password": "$2b$10$miUx794vNSFrJRxO2hoY6ufHjMmCvaOfgVA7XsCkKbZznyQLBbSmK",
+  "phoneNumber": "010-0000-0000",
+  "address": {
+    "postalCode": "13494",
+    "address1": "경기 성남시 분당구 판교역로 235  (삼평동)",
+    "address2": "1234"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668211659583"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668507936390"
+    }
+  },
+  "__v": 0,
+  "deletedAt": {
+    "$date": {
+      "$numberLong": "1668215932108"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "636ef007e660f550fd1b3757"
+  },
+  "fullName": "이준열",
+  "email": "vic2ori@naver.com",
+  "password": "$2b$10$cz2jiuJU0urwCHWJEcn2juyr7MeeevDvAYOxtMUIEqWY5Jb50lh6y",
+  "phoneNumber": "010-1234-1234",
+  "address": {
+    "postalCode": "13480",
+    "address1": "경기 성남시 분당구 판교동 649",
+    "address2": "123123123"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668214791288"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668238610285"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f078301c93f97b27b6e88"
+  },
+  "fullName": "엘리스유저",
+  "email": "user@elice.com",
+  "password": "$2b$10$OpwzgJu7qS.y0ULstVAJs.5v1.p/TJmR5wpMSAE6.ftTxfKIsW4NS",
+  "phoneNumber": "010-0000-0000",
+  "address": {
+    "postalCode": "13536",
+    "address1": "경기 성남시 분당구 판교역로2번길 23  (백현동)",
+    "address2": "1234"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668220803040"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668220803040"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f07b101c93f97b27b6e94"
+  },
+  "fullName": "엘리스관리자",
+  "email": "admin@elice.com",
+  "password": "$2b$10$5rjMv70aOwu1Wu4jg23fh.E0.A0iiU5ooiREX5ZhU.gXw9JwjVlDu",
+  "phoneNumber": "010-0000-0000",
+  "address": {
+    "postalCode": "13494",
+    "address1": "경기 성남시 분당구 판교역로 235  (삼평동)",
+    "address2": "456"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668220849639"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668220882658"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f12c701c93f97b27b7221"
+  },
+  "fullName": "김건우",
+  "email": "farenheim77@naver.coo",
+  "password": "$2b$10$hDs8StX4Vkop3OE.LwHyneNNwmk3iucuBtBLUe3yvXhRGgt/ZT7.6",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668223687380"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668223731270"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f1b3e01c93f97b27b7456"
+  },
+  "fullName": "김건우",
+  "email": "kku@gmail.com",
+  "password": "$2b$10$vVX3hm8PCQTpDf6JsRotKuIkjeTjS4ntXCMN7mT1N2Zo/sqfXT8fC",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668225854336"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668225914075"
+    }
+  },
+  "__v": 0,
+  "deletedAt": {
+    "$date": {
+      "$numberLong": "1668225914074"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "636f1d9401c93f97b27b7511"
+  },
+  "fullName": "테스트",
+  "email": "asda@asdas.com",
+  "password": "$2b$10$4HL9qKA5kn8vt36/BlDNhOnQR.d1mXWvVumQb62cz8cKdrXzQ6Fna",
+  "phoneNumber": "010-0000-0000",
+  "address": {
+    "postalCode": "46031",
+    "address1": "부산 기장군 장안읍 오리 480",
+    "address2": "1234"
+  },
+  "role": "ADMIN_G",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668226452593"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668508668351"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "636f48e401c93f97b27b759e"
+  },
+  "fullName": "이성일",
+  "email": "lsi1318@gmail.com",
+  "password": "$2b$10$6qC1F5cPk1dJasewuJVEn.deH1hEEi1oDiH0PxfPCzAsx2cbNvhEC",
+  "phoneNumber": "010-40414601",
+  "address": {
+    "postalCode": "11900",
+    "address1": "경기 구리시 담터길32번길 111  (갈매동)",
+    "address2": "123123123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668237540733"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668508668369"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "637368e701c93f97b27b849d"
+  },
+  "fullName": "김건우",
+  "email": "abcdefg@test.com",
+  "password": "$2b$10$0Hl45vfXpyI720.n02U3Fe023.Krby312gHbzFvfM.dYeGE2ox48S",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668507879138"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668508996236"
+    }
+  },
+  "__v": 0,
+  "deletedAt": {
+    "$date": {
+      "$numberLong": "1668507920537"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63736b7d01c93f97b27b85d1"
+  },
+  "fullName": "김건우",
+  "email": "asdfgh@test.com",
+  "password": "$2b$10$RpX98r3WkFxCIiJxtjTgzOv7yu33ixnTjJwzfYgS/0JkuxmOcfmra",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668508541044"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668508996281"
+    }
+  },
+  "__v": 0,
+  "deletedAt": {
+    "$date": {
+      "$numberLong": "1668508590112"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "63736cda01c93f97b27b8722"
+  },
+  "fullName": "김건우",
+  "email": "farenheim33@test.com",
+  "password": "$2b$10$eGkBlKe7/NsCye6vSZoVkeYbcUvxGZo9PFgKEv9tl3GKQZvjHXp1K",
+  "phoneNumber": "010-9939-2201",
+  "address": {
+    "postalCode": "06253",
+    "address1": "서울 강남구 강남대로 298  (역삼동)",
+    "address2": "123"
+  },
+  "role": "basic-user",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1668508890723"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1668508937191"
+    }
+  },
+  "__v": 0,
+  "deletedAt": {
+    "$date": {
+      "$numberLong": "1668508937190"
+    }
+  }
+}]
